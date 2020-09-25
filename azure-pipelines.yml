@@ -4,7 +4,7 @@
 # https://aka.ms/yaml
 
 trigger:
-- develop
+- none
 
 pool:
   vmImage: 'ubuntu-latest'
@@ -14,6 +14,11 @@ steps:
   displayName: 'Run a one-line script'
 
 - script: |
+    # clone the repository 
+    git clone https://suraj.kumar2:iydsFf8BpEsMzkC3hh9M@gitlab.com/FiftyFiveTech/interntraining/branchingtechnique.git
+
+    # Get inside the directory 
+    cd branchingtechnique
     # current Git branch
     branch=$(git symbolic-ref HEAD | sed -e 's,.*/\(.*\),\1,')
 
